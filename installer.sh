@@ -18,11 +18,8 @@ rm -rf /etc/tuxbox/*.xml
 wget -O /tmp/channels_backup_by-romeh.tar "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
 
 wait
-#!/bin/sh
-opkg install /tmp/*.ipk
-wait
-wait
 tar -xzf channels_backup_by-romeh.tar.gz  -C /
+wait
 sleep 2;
 
 
