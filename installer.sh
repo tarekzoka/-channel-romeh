@@ -13,8 +13,7 @@ rm -rf /etc/enigma2/*.radio
 rm -rf /etc/tuxbox/*.xml 
 #####################################################################################
 echo "         install channel    "
-cd /tmp
-set -e 
+
 wget -q  "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
 wait
 tar -xzf channels_backup_by-romeh.tar.gz  -C /
