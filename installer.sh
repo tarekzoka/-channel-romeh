@@ -21,7 +21,8 @@ wait
 #!/bin/sh
 opkg install /tmp/*.ipk
 wait
-opkg install --force-overwrite /tmp/*.ipk wait
+wait
+tar -xzf channels_backup_by-romeh.tar.gz  -C /
 sleep 2;
 
 
