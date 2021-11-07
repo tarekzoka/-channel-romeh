@@ -12,8 +12,6 @@ rm -rf /etc/enigma2/*.tv
 rm -rf /etc/enigma2/*.radio 
 rm -rf /etc/tuxbox/*.xml 
 #####################################################################################
-echo "         install channel    "
-
 #!/bin/sh
 #
 
