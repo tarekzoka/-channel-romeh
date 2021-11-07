@@ -12,25 +12,25 @@ rm -rf /etc/enigma2/*.tv
 rm -rf /etc/enigma2/*.radio 
 rm -rf /etc/tuxbox/*.xml 
 #####################################################################################
-#!/bin/sh
-#
-wget -O /tmp/channels_backup_by-romeh.tar "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
+echo "         install channel    "
+cd /tmp
+set -e 
+wget -q  "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
 wait
 tar -xzf channels_backup_by-romeh.tar.gz  -C /
 wait
 cd ..
 set +e
 rm -f /tmp/channels_backup_by-romeh.tar.gz
-sleep 2; 
+sleep 2;
 echo "" 
-echo "****************************************************************************************************************************"
-
+echo "" 
 echo "****************************************************************************************************************************"
 echo "# Channel  INSTALLED SUCCESSFULLY #"
 echo "
 echo " "*********************************************************" 
 	echo "********************************************************************************"
-echo "   UPLOADED BY  >>>>   TAR_EK "   
+echo "   UPLOADED BY  >>>>   EMIL_NABIL "   
 sleep 4;
 	echo '========================================================================================================================='
 ###########################################                                                                                                                  
