@@ -16,12 +16,16 @@ rm -rf /etc/tuxbox/*.xml
 #
 
 wget -O /tmp/channels_backup_by-romeh.tar "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
-
 wait
 tar -xzf channels_backup_by-romeh.tar.gz  -C /
 wait
+cd ..
+set +e
+rm -f /tmp/channels_backup_by-romeh.tar.gz
 sleep 2;
-
+echo "" 
+echo "" 
+echo "****************************************************************************************************************************"
 
 echo "****************************************************************************************************************************"
 echo "# Channel  INSTALLED SUCCESSFULLY #"
