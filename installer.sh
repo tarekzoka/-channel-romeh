@@ -14,16 +14,19 @@ rm -rf /etc/tuxbox/*.xml
 #####################################################################################
 echo "         install channel    "
 
-wget https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/installer.sh -qO - | /bin/sh
+#!/bin/sh
+#
+
+wget -O /tmp/channels_backup_by-romeh.tar "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
+
 wait
-tar -xzf channels_backup_by-romeh.tar.gz  -C /
+#!/bin/sh
+opkg install /tmp/*.ipk
 wait
-cd ..
-set +e
-rm -f /tmp/channels_backup_by-romeh.tar.gz
+opkg install --force-overwrite /tmp/*.ipk wait
 sleep 2;
-echo "" 
-echo "" 
+
+
 echo "****************************************************************************************************************************"
 echo "# Channel  INSTALLED SUCCESSFULLY #"
 echo "
