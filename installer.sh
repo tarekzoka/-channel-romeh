@@ -12,10 +12,15 @@ rm -rf /etc/enigma2/*.tv
 rm -rf /etc/enigma2/*.radio 
 #####################################################################################
 echo "         install channel    "
-cd /tmp
-wget -q  "https://raw.githubusercontent.com/tarekzoka/channel-romeh/main/channels_backup_by-romeh.tar.gz"
+#!/bin/sh
+#
+
+wget -O /tmp/channels_backup_by-romeh.tar.gz "https://github.com/tarekzoka/channel-romeh/raw/main/channels_backup_by-romeh.tar.gz"
+
+
 wait
-tar -xzf channels_backup_by-romeh.tar.gz  -C /
+dpkg -i --force-overwrite /tmp/*.deb tar xzvpf /tmp/*.tar.gz  -C /
+
 wait
 cd ..
 set +e
